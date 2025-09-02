@@ -1,0 +1,63 @@
+.app {
+  height: 100vh;
+  background-image: url('./assets/img/backgroundBoda.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-gradient-top-transparent {
+  background: linear-gradient(to bottom, transparent 0%, #ffe5cf 30%, #ffe5cf 100%);
+}
+.text-custom-gray {
+  color: #646663;
+}
+.text-custom-white {
+  color: #FFFFFF;
+
+}
+.margin-botton {
+  margin-bottom: 10px;
+}
+.margin-RL {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.size-small {
+  font-size: 20px;
+}
+.size-medium {
+  font-size: 24px;
+}
+.size-large {
+  font-size: 40px;
+}
+.btn-color {
+  background-color: #646663;
+  border-radius: 50%;
+}
+.arrow-down {
+  font-size: 1rem;
+  line-height: 0.5;
+}
+
+.delay-150 {
+  animation-delay: 0.15s;
+}
+
+@keyframes bounce-custom {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.bounce-custom {
+  display: inline-block;
+  animation: bounce-custom 2s infinite;
+}
