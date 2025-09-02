@@ -29,7 +29,8 @@
     <img :src="corazon" alt="Corazón" class="mb-6 w-64 sm:w-80 md:w-96 margin-top-custom" width="25%" />
   </section>
 
-  <hr style="width: 80%; border: 1px solid #646663; margin: 2rem auto;" />
+  <hr />
+
   <div>
     <p class="font- font-custom">Dónde y cuándo</p>
     <img :src="hotel" alt="Hotel" class="mb-6 w-64 sm:w-80 md:w-96 width-img" />
@@ -50,7 +51,7 @@
     <span>30850 Totana, Murcia</span>
   </div>
 
-  <button>Ver mapa</button>
+  <button class="btn-map">Ver mapa</button>
 
 </template>
 
@@ -82,74 +83,4 @@ const countdown = computed(() => {
 
 </script>
 
-<style>
-section {
-  min-height: 100vh;
-  background-size: cover;
-}
-
-@media (max-width: 1240px) {
-  section {
-    min-height: 60vh;
-  }
-}
-
-@media (max-width: 640px) {
-  section {
-    min-height: 40vh;
-  }
-}
-
-.font-custom {
-  font-size: xx-large;
-  font-weight: bold;
-}
-
-.width-img {
-  width: -webkit-fill-available;
-}
-
-.gap {
-  gap: 20px;
-  width: 80%;
-}
-
-.btn-count {
-  background-color: #f0c386;
-  color: white;
-}
-
-.margin-top {
-  margin-top: 20px;
-}
-
-.margin-bottom {
-  margin-bottom: 20px;
-}
-
-.font-count {
-  font-size: 20px
-}
-
-.margin-top-custom {
-  margin-top: 110px;
-}
-
-.info-hotel {
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 10px;
-}
-.info-hotel--custom {
-  display: flex;
-  flex-direction: column;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.font-bold{
-  font-weight: bold;
-}
-</style>
+<style src="/src/styles/Count.css"></style>

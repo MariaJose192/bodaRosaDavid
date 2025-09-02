@@ -1,0 +1,34 @@
+
+  .footer {
+    background-color: #646663;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .footer .icons {
+    margin-bottom: 15px;
+  }
+  .footer a {
+    margin: 0 10px;
+    color: white;
+  }
+  .footer p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 10px;
+  }
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .icons a {
+    color: #fff;
+    transition: transform 0.2s;
+  }
+  
+  .icons a:hover {
+    transform: scale(1.1);
+    color: #f3ecdb;
+  }
