@@ -292,3 +292,116 @@ textarea {
     justify-content: space-between;
     align-items: center;
 }
+
+.margin-sugerencias{
+  margin-top: 40px;
+}
+
+.accordion-container {
+  width: 100%;
+  max-width: 600px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* TARJETA COMPLETA */
+.accordion-item {
+  background: url('../assets/img/backgroundBoda.jpg') center/cover no-repeat;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  border: 2px solid #e8dccb;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  overflow: hidden; /* IMPORTANTE: une todo visualmente */
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* CABECERA */
+.accordion-header {
+  padding: 18px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-header span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #5a4a42;
+}
+
+/* FLECHA */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* CONTENIDO INTERNO */
+.accordion-content {
+  padding: 15px 20px;
+  color: #4a3b32;
+  line-height: 1.5;
+  animation: fadeIn 0.25s ease;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hoteles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+
+
+/* Imagen */
+.hotel-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* Título */
+.hotel-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5a4a42;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Botones */
+.hotel-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+
+.hotel-btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  background: #f0c386;
+  border-radius: 10px;
+  border: 2px solid #5a4a42;
+  color: #5a4a42;
+  text-decoration: none;
+  transition: 0.2s ease;
+  font-size: 13px;
+}
+
+.hotel-btn:hover {
+  background: #f7f1e8;
+  transform: scale(1.03);
+}
+
