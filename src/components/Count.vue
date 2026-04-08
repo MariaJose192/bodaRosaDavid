@@ -51,7 +51,68 @@
     <span>30850 Totana, Murcia</span>
   </div>
 
-  <button class="btn-map">Ver mapa</button>
+  <button class="btn-map" @click="openMap">Ver mapa</button>
+
+  <div class="font-celebration">
+    <span>Te compartimos los </span>
+    <span>detalles de la celebración</span>
+  </div>
+
+  <img :src="itinerario" alt="Itinerario" class="w-full max-w-md mx-auto mt-4" />
+
+  <img :src="asistencia" alt="Asistencia" class="w-full max-w-md mx-auto mt-4" />
+
+  <div class="rsvp-container">
+    <p class="font-custom">AYÚDANOS CONFIRMANDO LOS SIGUIENTES DATOS</p>
+  </div>
+
+  <div class="input-datos">
+    <p>Nombre completo de los asistentes</p>
+    <input v-model="nombre" type="text" />
+  </div>
+
+  <div class="input-datos">
+    <p>Alergias, intolerancias o dieta especial</p>
+    <textarea v-model="alergias"></textarea>
+  </div>
+
+  <div class="input-datos">
+    <p>¿Quieres dejar un mensaje?</p>
+    <textarea v-model="mensajeExtra"></textarea>
+  </div>
+
+  <div class="input-datos">
+    <p>Dinos una canción que no puede faltar</p>
+    <input v-model="cancion" type="text" />
+  </div>
+
+  <button @click="enviarFormulario" class="btn-rsvp mt-4">CONFIRMAR</button>
+
+  <img :src="agradecer" alt="agradecer" class="w-full max-w-md mx-auto mt-4" />
+
+  <img :src="infoAsistencia" alt="infoAsistencia" class="w-full max-w-md mx-auto mt-4" />
+
+  <img :src="codigoVestimenta" alt="codigoVestimenta" class="w-full max-w-md mx-auto mt-4" />
+
+  <p class="font-celebration">Cocktail</p>
+
+  <img :src="cocktail" alt="cocktail" class="w-full max-w-md mx-auto mt-4" />
+
+  <img :src="regalos" alt="regalos" class="w-full max-w-md mx-auto mt-4" />
+
+  <button @click="abrirPopup" class="btn-rsvp mt-4">VER NÚMERO DE CUENTA</button>
+
+  <div v-if="mostrarCuenta" class="popup-overlay" @click.self="cerrarPopup">
+    <div class="popup-box">
+
+      <div class="num-count">
+        <p class="cuenta-text">{{ numeroCuenta }}</p>
+        <img :src="iconCopy" alt="Copiar número" class="copy-icon" @click="copiarCuenta" />
+      </div>
+
+
+    </div>
+  </div>
 
 </template>
 
@@ -63,6 +124,17 @@ import paraBoda from '../assets/img/paraBoda.png'
 import onSiga from '../assets/img/onSiga.png'
 import corazon from '../assets/img/corazon.png'
 import hotel from '../assets/img/hotel.jpg'
+import itinerario from '../assets/img/itinerario.png'
+import asistencia from '../assets/img/asistencia.png'
+import codigoVestimenta from '../assets/img/codigoVestimenta.png'
+import agradecer from '../assets/img/agradecer.png'
+import infoAsistencia from '../assets/img/infoAsistencia.png'
+import cocktail from '../assets/img/cocktail.png'
+import regalos from '../assets/img/regalos.png'
+import emailjs from "emailjs-com"
+import iconCopy from '../assets/img/copy.png'
+
+
 
 const weddingDate = new Date("2026-09-19T12:00:00")
 const now = ref(new Date())
@@ -80,6 +152,72 @@ const countdown = computed(() => {
 
   return { days, hours, minutes, seconds }
 })
+
+const openMap = () => {
+  window.open(
+    "https://www.google.com/maps?q=Hotel+Executive+Sport+Totana",
+    "_blank"
+  );
+};
+
+const asistentes = ref("")
+const nombres = ref([])
+
+const nombre = ref("")
+const alergias = ref("")
+const cancion = ref("")
+const mensajeExtra = ref("")
+
+const enviarFormulario = () => {
+  if (!nombre.value) {
+    alert("Por favor, escribe tu nombre")
+    return
+  }
+
+  const templateParams = {
+    nombre: nombre.value,
+    alergias: alergias.value,
+    cancion: cancion.value,
+    mensaje: mensajeExtra.value
+  }
+
+  emailjs
+    .send(
+      "service_wdmi26r",
+      "template_0la1q4j",
+      templateParams,
+      "macttVRllKSlC84t0"
+    )
+    .then(() => {
+      alert("¡Confirmación enviada por email!")
+      nombre.value = ""
+      alergias.value = ""
+      cancion.value = ""
+      mensajeExtra.value = ""
+    })
+    .catch(() => {
+      alert("Hubo un error al enviar el email")
+    })
+}
+
+const mostrarCuenta = ref(false)
+const numeroCuenta = ref("ES12 3456 7890 1234 5678 9012") // ← tu número real
+
+const abrirPopup = () => {
+  mostrarCuenta.value = true
+}
+
+const cerrarPopup = () => {
+  mostrarCuenta.value = false
+}
+
+const copiarCuenta = () => {
+  navigator.clipboard.writeText(numeroCuenta.value)
+  alert("Número de cuenta copiado")
+}
+
+
+
 
 </script>
 

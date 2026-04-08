@@ -38,11 +38,15 @@ hr {
   background-color: #f0c386;
   color: white;
 }
-.btn-map{
+
+.btn-map {
   background-color: #f0c386;
   margin: 20px;
+  margin-bottom: 50px;
+  border: 2px solid #5a4a42;
 
 }
+
 .margin-top {
   margin-top: 20px;
 }
@@ -55,8 +59,13 @@ hr {
   font-size: 20px
 }
 
+.font-celebration {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
 .margin-top-custom {
-  margin-top: 110px;
+  margin-top: 130px;
 }
 
 .info-hotel {
@@ -76,4 +85,210 @@ hr {
 
 .font-bold {
   font-weight: bold;
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+.rsvp-container {
+  background: #f0c386;
+  padding: 15px;
+  width: 80%;
+  max-width: 450px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 2px solid #5a4a42;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* TÍTULO */
+.rsvp-container p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #5a4a42;
+}
+
+/* INPUTS Y TEXTAREAS */
+.input-rsvp {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 2px solid #d8c9b8;
+  background: #fff;
+  font-size: 1rem;
+  color: #5a4a42;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.input-rsvp::placeholder {
+  color: #9c8f85;
+}
+
+.input-rsvp:focus {
+  border-color: #b89f8a;
+  background: #fffdfb;
+}
+
+.input-datos {
+  width: 100%;
+  max-width: 600px;
+  /* tamaño del bloque */
+  margin: 0 auto 20px auto;
+  text-align: left;
+}
+
+.input-datos p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5a4a42;
+  margin-bottom: 8px;
+}
+
+/* INPUT GRANDE Y BONITO */
+.input-datos input,
+textarea {
+  width: 90%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 2px solid #5a4a42;
+  background: content-box;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.input-datos input::placeholder {
+  color: #9c8f85;
+}
+
+.input-datos input:focus {
+  border-color: #b89f8a;
+  background: #fffdfb;
+}
+
+
+/* BOTÓN CONFIRMAR */
+.btn-rsvp {
+  background: #d7b89c;
+  color: #fff;
+  padding: 14px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #5a4a42;
+  background: #f0c386;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 2px solid #5a4a42;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-rsvp:hover {
+  background: #c7a88d;
+  transform: scale(1.02);
+}
+
+/* FONDO OSCURECIDO */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* CAJA DEL POPUP */
+.popup-box {
+  background: url('../assets/img/backBoda.jpg') center/cover no-repeat;
+  padding: 30px;
+  width: 80%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: fadeIn 0.25s ease;
+  color: #4a3b32; /* texto elegante */
+  border: 2px solid #e8dccb; 
+}
+
+.popup-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #5a4a42;
+}
+
+.cuenta-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 15px 0;
+  color: #3d2f28;
+}
+
+/* BOTÓN COPIAR */
+.btn-copy {
+  background: #d7b89c;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.btn-copy:hover {
+  background: #c7a88d;
+}
+
+/* BOTÓN CERRAR */
+.btn-close {
+  background: #eee;
+  color: #444;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.btn-close:hover {
+  background: #ddd;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.copy-icon {
+  top: 55px; 
+  right: 15px;
+  width: 28px;     
+  height: 28px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.2s ease;
+}
+
+.copy-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.num-count{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
