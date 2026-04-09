@@ -312,6 +312,10 @@ const abrirPopup = () => {
 const cerrarPopup = () => {
   mostrarCuenta.value = false
 }
+const copiarCuenta = () => {
+  navigator.clipboard.writeText(numeroCuenta.value)
+
+}
 
 const open = ref(null)
 
