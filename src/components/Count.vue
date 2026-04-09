@@ -26,7 +26,6 @@
 
   <section class="relative flex flex-col items-center justify-center text-center text-custom-gray
          bg-no-repeat bg-center bg-cover" :style="{ backgroundImage: `url(${onSiga})` }">
-    <img :src="corazon" alt="Corazón" class="mb-6 w-64 sm:w-80 md:w-96 margin-top-custom" width="25%" />
   </section>
 
   <hr />
@@ -42,7 +41,7 @@
   </div>
 
   <div class="font-bold">
-    <p>13:00 hrs</p>
+    <p>12:30 hrs</p>
   </div>
 
   <div class="info-hotel--custom">
@@ -87,10 +86,6 @@
   </div>
 
   <button @click="enviarFormulario" class="btn-rsvp mt-4">CONFIRMAR</button>
-
-  <img :src="agradecer" alt="agradecer" class="w-full max-w-md mx-auto mt-4" />
-
-  <img :src="infoAsistencia" alt="infoAsistencia" class="w-full max-w-md mx-auto mt-4" />
 
   <img :src="codigoVestimenta" alt="codigoVestimenta" class="w-full max-w-md mx-auto mt-4" />
 
@@ -185,56 +180,47 @@
       </div>
     </div>
 
-
-<div class="accordion-item" @click="toggle(5)">
-  <div class="accordion-header">
-    <span>LUGARES TURÍSTICOS</span>
-    <span class="arrow" :class="{ open: open === 5 }">▼</span>
-  </div>
-
-  <div v-if="open === 5" class="accordion-content">
-
-    <p class="mb-4">
-      Haz clic en cada ubicación para abrirla directamente en Google Maps.
-    </p>
-
-    <div class="hoteles-container">
-
-      <div class="hotel-card"
-           v-for="(lugar, index) in lugaresTuristicos"
-           :key="lugar.nombre">
-
-        <div class="hotel-header">
-          <img :src="lugar.img" class="hotel-img" />
-
-          <div class="hotel-info">
-            <h3 class="hotel-title">{{ lugar.nombre }}</h3>
-            <p class="hotel-distance">⏱️ {{ lugar.tiempo }}</p>
-
-            <div class="hotel-buttons">
-              <a :href="lugar.maps" target="_blank" class="hotel-btn">
-                UBICACIÓN
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <hr v-if="index < lugaresTuristicos.length - 1" />
-
+    <div class="accordion-item" @click="toggle(5)">
+      <div class="accordion-header">
+        <span>LUGARES TURÍSTICOS</span>
+        <span class="arrow" :class="{ open: open === 5 }">▼</span>
       </div>
 
+      <div v-if="open === 5" class="accordion-content">
+
+        <p class="mb-4">
+          Haz clic en cada ubicación para abrirla directamente en Google Maps.
+        </p>
+
+        <div class="hoteles-container">
+
+          <div class="hotel-card" v-for="(lugar, index) in lugaresTuristicos" :key="lugar.nombre">
+
+            <div class="hotel-header">
+              <img :src="lugar.img" class="hotel-img" />
+
+              <div class="hotel-info">
+                <h3 class="hotel-title">{{ lugar.nombre }}</h3>
+                <p class="hotel-distance">⏱️ {{ lugar.tiempo }}</p>
+
+                <div class="hotel-buttons">
+                  <a :href="lugar.maps" target="_blank" class="hotel-btn">
+                    UBICACIÓN
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <hr v-if="index < lugaresTuristicos.length - 1" />
+
+          </div>
+
+        </div>
+
+      </div>
     </div>
 
   </div>
-</div>
-
-
-  </div>
-
-
-
-
-
 
 </template>
 
@@ -244,20 +230,15 @@ import postit from '../assets/img/postit.png'
 import falta from '../assets/img/falta.png'
 import paraBoda from '../assets/img/paraBoda.png'
 import onSiga from '../assets/img/onSiga.png'
-import corazon from '../assets/img/corazon.png'
 import hotel from '../assets/img/hotel.jpg'
 import itinerario from '../assets/img/itinerario.png'
 import asistencia from '../assets/img/Asistencia.png'
 import codigoVestimenta from '../assets/img/codigoVestimenta.png'
-import agradecer from '../assets/img/agradecer.png'
-import infoAsistencia from '../assets/img/infoAsistencia.png'
 import cocktail from '../assets/img/cocktail.png'
 import regalos from '../assets/img/regalos.png'
 import emailjs from "emailjs-com"
 import iconCopy from '../assets/img/copy.png'
 import sugerencias from '../assets/img/sugerencias.png'
-
-
 
 
 const weddingDate = new Date("2026-09-19T12:00:00")
@@ -283,9 +264,6 @@ const openMap = () => {
     "_blank"
   );
 };
-
-const asistentes = ref("")
-const nombres = ref([])
 
 const nombre = ref("")
 const alergias = ref("")
@@ -325,7 +303,7 @@ const enviarFormulario = () => {
 }
 
 const mostrarCuenta = ref(false)
-const numeroCuenta = ref("ES12 3456 7890 1234 5678 9012") // ← tu número real
+const numeroCuenta = ref("ES44 1583 0001 1090 1966 7673") 
 
 const abrirPopup = () => {
   mostrarCuenta.value = true
@@ -334,12 +312,6 @@ const abrirPopup = () => {
 const cerrarPopup = () => {
   mostrarCuenta.value = false
 }
-
-const copiarCuenta = () => {
-  navigator.clipboard.writeText(numeroCuenta.value)
-  alert("Número de cuenta copiado")
-}
-
 
 const open = ref(null)
 

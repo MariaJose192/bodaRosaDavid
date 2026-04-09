@@ -9,7 +9,7 @@
   background: linear-gradient(to bottom, transparent 0%, #ffe5cf 30%, #ffe5cf 100%);
 }
 .text-custom-gray {
-  color: #646663;
+  color: #000000;
 }
 .text-custom-white {
   color: #FFFFFF;
@@ -33,7 +33,7 @@
   font-size: 40px;
 }
 .btn-color {
-  background-color: #646663;
+  background-color: #000000;
   border-radius: 50%;
 }
 .arrow-down {

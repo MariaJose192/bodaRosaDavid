@@ -8,7 +8,7 @@
         <i class="fab fa-github fa-2x"></i>
       </a>
     </div>
-    <p>❤️ Desarrollado con cariño por María José Alcaraz · 2025 ❤️</p>
+    <p>❤️ Desarrollado por María José Alcaraz ❤️</p>
   </footer>
 </template>
 

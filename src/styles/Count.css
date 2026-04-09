@@ -43,7 +43,7 @@ hr {
   background-color: #f0c386;
   margin: 20px;
   margin-bottom: 50px;
-  border: 2px solid #5a4a42;
+  border: 2px solid #000000;
 
 }
 
@@ -87,7 +87,6 @@ hr {
   font-weight: bold;
 }
 
-/* CONTENEDOR DEL FORMULARIO */
 .rsvp-container {
   background: #f0c386;
   padding: 15px;
@@ -96,27 +95,24 @@ hr {
   margin: 40px auto;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  border: 2px solid #5a4a42;
-  font-family: 'Montserrat', sans-serif;
+  border: 2px solid #000000;
+  font-family: 'Prata', serif;
 }
 
-/* TÍTULO */
 .rsvp-container p {
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 15px;
-  color: #5a4a42;
+  color: #000000;
 }
 
-/* INPUTS Y TEXTAREAS */
 .input-rsvp {
   width: 100%;
   padding: 14px;
-  border-radius: 12px;
   border: 2px solid #d8c9b8;
   background: #fff;
   font-size: 1rem;
-  color: #5a4a42;
+  color: #000000;
   outline: none;
   transition: 0.2s ease;
 }
@@ -133,7 +129,6 @@ hr {
 .input-datos {
   width: 100%;
   max-width: 600px;
-  /* tamaño del bloque */
   margin: 0 auto 20px auto;
   text-align: left;
 }
@@ -141,17 +136,16 @@ hr {
 .input-datos p {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #5a4a42;
+  color: #000000;
   margin-bottom: 8px;
 }
 
-/* INPUT GRANDE Y BONITO */
 .input-datos input,
 textarea {
   width: 90%;
   padding: 10px;
   font-size: 1.1rem;
-  border: 2px solid #5a4a42;
+  border: 2px solid #000000;
   background: content-box;
   outline: none;
   transition: 0.2s ease;
@@ -167,7 +161,6 @@ textarea {
 }
 
 
-/* BOTÓN CONFIRMAR */
 .btn-rsvp {
   background: #d7b89c;
   color: #fff;
@@ -179,14 +172,15 @@ textarea {
   transition: 0.2s ease;
   font-size: 1.2rem;
   font-weight: 400;
-  margin-bottom: 15px;
-  color: #5a4a42;
+  margin-bottom: 50px;
+  color: #000000;
   background: #f0c386;
   max-width: 450px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  border: 2px solid #5a4a42;
-  font-family: 'Montserrat', sans-serif;
+  border: 2px solid #000000;
+  font-family: 'Prata', serif;
+  margin-top: 10px;
 }
 
 .btn-rsvp:hover {
@@ -194,7 +188,6 @@ textarea {
   transform: scale(1.02);
 }
 
-/* FONDO OSCURECIDO */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -208,7 +201,6 @@ textarea {
   z-index: 999;
 }
 
-/* CAJA DEL POPUP */
 .popup-box {
   background: url('../assets/img/backBoda.jpg') center/cover no-repeat;
   padding: 30px;
@@ -217,29 +209,27 @@ textarea {
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   animation: fadeIn 0.25s ease;
-  color: #4a3b32; /* texto elegante */
+  color: #4a3b32; 
   border: 2px solid #e8dccb; 
 }
 
 .popup-box h3 {
   font-size: 1.3rem;
   margin-bottom: 10px;
-  color: #5a4a42;
+  color: #000000;
 }
 
 .cuenta-text {
   font-size: 1.2rem;
   font-weight: 600;
   margin: 15px 0;
-  color: #3d2f28;
+  color: #000000;
 }
 
-/* BOTÓN COPIAR */
 .btn-copy {
   background: #d7b89c;
   color: #fff;
   padding: 12px 20px;
-  border-radius: 10px;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -251,12 +241,10 @@ textarea {
   background: #c7a88d;
 }
 
-/* BOTÓN CERRAR */
 .btn-close {
   background: #eee;
   color: #444;
   padding: 10px 20px;
-  border-radius: 10px;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -300,17 +288,16 @@ textarea {
 .accordion-container {
   width: 100%;
   max-width: 600px;
-  font-family: 'Cormorant Garamond', serif;
+  display: contents;
+  font-family: 'Prata', serif;
 }
 
-/* TARJETA COMPLETA */
 .accordion-item {
   background: url('../assets/img/backgroundBoda.jpg') center/cover no-repeat;
-  border-radius: 14px;
   margin-bottom: 15px;
   border: 2px solid #e8dccb;
   box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-  overflow: hidden; /* IMPORTANTE: une todo visualmente */
+  overflow: hidden; 
   cursor: pointer;
   transition: 0.2s ease;
 }
@@ -326,7 +313,7 @@ textarea {
 .accordion-header span {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #5a4a42;
+  color: #000000;
 }
 
 /* FLECHA */
@@ -366,7 +353,6 @@ textarea {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 12px;
   margin-bottom: 12px;
 }
 
@@ -374,7 +360,7 @@ textarea {
 .hotel-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #5a4a42;
+  color: #000000;
   margin-bottom: 15px;
   text-align: center;
 }
@@ -392,9 +378,8 @@ textarea {
   text-align: center;
   padding: 10px 0;
   background: #f0c386;
-  border-radius: 10px;
-  border: 2px solid #5a4a42;
-  color: #5a4a42;
+  border: 2px solid #000000;
+  color: #000000;
   text-decoration: none;
   transition: 0.2s ease;
   font-size: 13px;
